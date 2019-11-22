@@ -1,0 +1,26 @@
+#Configuração de rotas
+/portal:  PortalController
+/login-form:  LoginFormController
+/login: LoginController
+/logout:  LogoutController
+/listar-produtos: ListarProdutosController
+/adicionar-produto-form:  AdicionarProdutoFormController
+/adicionar-produto: AdicionarProdutoController
+/apagar-produto:  ApagarProdutoController
+/editar-produto-form: EditarProdutoFormController
+/editar-produto:  EditarProdutoController
+/404found:  path404Controller
+/opcoes: opcoesAdminController
+/listar-funcionarios: ListarFuncionariosController
+/listar-func: listarController
+/adcionar-funcionario: adcionarFuncionarioController
+/adcionar-funcionario-form: adcionarFuncionarioFormController
+/editar-funcionario-form: editarFuncionarioFormController
+/editar-funcionario:  EditarFuncionarioController
+/apagar-funcionario:  ApagaFuncionarioController
+/listar-medicamento: listarMedicamentoController
+/adcionar-medicamento: adcionarMedicamentoController
+/adcionar-medicamento-form: adcionarMedicamentoFormController
+/editar-medicamento-form: editarMedicamentoFormController
+/editar-medicamento:  EditarMedicamentoController
+/apagar-medicamento: ApagarMedicamentoController

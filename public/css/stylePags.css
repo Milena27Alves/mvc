@@ -1,0 +1,137 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial;
+    padding: 10px;
+    background: #49d1ba;
+}
+.cabecalho{
+    padding: 1%; /* gera espaço em torno da logo */
+    text-align: center; /* Faz com que a logo fique centralizada */
+    background: #00ACC1;
+}
+
+.primeiracoluna {
+    float: left; /* especifica como um elemento deve flutuar.*/
+    width: 75%; /* Define a largura */
+}
+.segundacoluna {
+    float: left; /* especifica como um elemento deve flutuar.*/
+    width: 25%; /* Define a largura */
+    background-color: #F2F2F2;
+    padding-left: 20px;
+}
+.card {
+    background-color: white;
+    padding: 20px;
+    margin-top: 20px;
+    text-align: justify;
+}
+.areaconce:after /*O seletor: after insere algo após o conteúdo de cada elemento selecionado..*/
+{
+    content: ""; /*especificar o conteúdo a ser inserido. */
+    display: table; /* especifica o comportamento de exibição (o tipo de caixa de renderização) de um elemento.*/
+    clear: both; /*especifica em quais lados de um elemento elementos flutuantes não podem flutuar. */
+    margin: 100px;
+}
+
+form{
+
+    margin: 20px alto;
+}
+
+
+div.box {
+    width:275px; /* Define a largura */
+    background:#00ACC1;
+    position:relative; /* Define a posição do elemento */
+    top:0px;
+    border:1px solid #00ACC1; /* borda do elemento */
+}
+
+div.box h1 {
+    color:black; /* Define a cor da fonte */
+    font-size:13px;  /* Define o tamanho da fonte */
+    text-transform:uppercase; /* transforma todas as letras em maiusculas */
+    border-bottom:1px solid #00ACC1; /*define o estilo da borda inferior para o elemento*/
+    border-top:1px solid #00ACC1; /*define o estilo da borda superior para o elemento*/
+}
+
+div.box label {
+    width:99%; /* Define a largura */
+    display: block;
+    background:#00ACC1;
+    border-top:1px solid #00ACC1;
+    border-bottom:1px solid #00ACC1;
+    padding:5px 0 5px 0;
+}
+
+div.box label span {
+    display: block;
+    color:black;
+    font-size:12px;
+    float:left;
+    width:65px; /* Define a largura */
+    text-align:right;
+    padding:5px 5px 0 0;
+}
+
+div.box .input_text {
+    padding:10px 10px;
+    width:200px; /* Define a largura */
+    background:#E0F7F4;
+    border-bottom: 1px double #00ACC1;
+    border-top: 1px double #00ACC1;
+    border-left:1px double #00ACC1;
+    border-right:1px double #00ACC1;
+}
+
+div.box .message{
+    padding:7px 7px;
+    width:200px; /* Define a largura */
+    background:#E0F7F4;
+    border-bottom: 1px double #00ACC1;
+    border-top: 1px double #00ACC1;
+    border-left:1px double #00ACC1;
+    border-right:1px double #00ACC1;
+    overflow:hidden;
+    height:75px;
+}
+
+div.box .button{
+    margin:0 0 10px 0;
+    padding:4px 7px;
+    background:white;
+    border:0px;
+    position: relative;
+    top:10px;
+    left:180px;
+    width:80px; /* Define a largura */
+    border-bottom: 1px double white;
+    border-top: 1px double white;
+    border-left:1px double white;
+    border-right:1px double white;
+}
+.rodape {
+    padding: padding;
+    text-align: center;
+    background: #ddd;
+    margin-top: 20px;
+    font-size: 20px;
+}
+
+.rodape h1 {
+    font-size: 50px;
+}
+.icones_sociais ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    width: 100%; /* Define a largura */
+
+}
+.icones_sociais ul li{
+    display: inline-block;
+    margin: 0 20px 0 0;
+}
