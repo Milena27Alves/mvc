@@ -52,3 +52,11 @@ div#corpo-do-formulario{
     height: 600px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
+#data{
+    margin-left: 350px;
+    height: 100px;
+    width: 500px;
+}
+#data2{
+    margin-top: 30px;
+}

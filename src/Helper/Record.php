@@ -48,7 +48,6 @@ abstract class Record
         $rc = new ReflectionClass(get_called_class());
         $sql = "SELECT * FROM {$rc->getShortName()} WHERE id = $id";
 
-
         if ($conn = Transaction::get()) {
             $result = $conn->query($sql);
             return $result->fetchObject(get_called_class());
@@ -83,10 +82,10 @@ abstract class Record
     {
         $rc = new ReflectionClass(get_called_class());
         $sql = "SELECT * FROM {$rc->getShortName()}";
+
         if($filter){
             $sql .= " WHERE {$filter}";
         }
-
         if ($conn = Transaction::get()) {
             return $conn->query($sql)->fetchAll(PDO::FETCH_CLASS,get_called_class());
         }
@@ -136,5 +135,67 @@ abstract class Record
         else {
             return "NULL";
         }
+    }
+
+    public static function BucarPaciente($id)
+    {
+        $sql = "SELECT id, nome, sexo, peso, altura, sus, tipo, id_familia, endereco FROM paciente WHERE id_familia = $id";
+        if ($conn = Transaction::get()) {
+            $result = $conn->query($sql);
+            return $result->fetchAll(get_called_class());
+        }
+        else {
+            throw new Exception('Não há transação ativa!!');
+        }
+    }
+    public static function allPaciente($id)
+    {
+        $rc = new ReflectionClass(get_called_class());
+        $sql = "SELECT * FROM {$rc->getShortName()} WHERE id_familia = $id";
+        if ($conn = Transaction::get()) {
+            return $conn->query($sql)->fetchAll(PDO::FETCH_CLASS,get_called_class());
+        }
+        else {
+            throw new Exception('Não há transação ativa!!');
+        }
+
+    }
+    public static function allData($data)
+    {
+        $rc = new ReflectionClass(get_called_class());
+        $sql = "SELECT * FROM {$rc->getShortName()} WHERE data_consulta like '{$data}'";
+        if ($conn = Transaction::get()) {
+            return $conn->query($sql)->fetchAll(PDO::FETCH_CLASS,get_called_class());
+        }
+        else {
+            throw new Exception('Não há transação ativa!!');
+        }
+
+    }
+
+    public static function allDat($data)
+    {
+        $rc = new ReflectionClass(get_called_class());
+        $sql = "SELECT * FROM {$rc->getShortName()} WHERE data_consulta like '{$data}'";
+        if ($conn = Transaction::get()) {
+            return $conn->query($sql)->fetchAll(PDO::FETCH_CLASS,get_called_class());
+        }
+        else {
+            throw new Exception('Não há transação ativa!!');
+        }
+
+    }
+
+    public static function allMedico()
+    {
+        $rc = new ReflectionClass(get_called_class());
+        $sql = "SELECT * FROM {$rc->getShortName()} WHERE tipo = 4";
+        if ($conn = Transaction::get()) {
+            return $conn->query($sql)->fetchAll(PDO::FETCH_CLASS,get_called_class());
+        }
+        else {
+            throw new Exception('Não há transação ativa!!');
+        }
+
     }
 }

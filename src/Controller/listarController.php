@@ -4,6 +4,7 @@
 namespace Ifnc\Tads\Controller;
 
 
+use Ifnc\Tads\Entity\Endereco;
 use Ifnc\Tads\Entity\Funcionarios;
 use Ifnc\Tads\Helper\Render;
 use Ifnc\Tads\Helper\Transaction;

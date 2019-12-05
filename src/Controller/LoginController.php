@@ -44,12 +44,12 @@ class LoginController implements IController
             case 2:
                 //acs
                 $_SESSION["usuario"]=$usuario;
-                header('Location: /listar-medicamento');
+                header('Location: /opcoesAcs');
                 exit();
             case 3:
                 //enfermeiro
                 $_SESSION["usuario"]=$usuario;
-                header('Location: /listar-medicamento');
+                header('Location: /opcoesAtendente');
                 exit();
             case 4:
                 //medico
@@ -64,7 +64,7 @@ class LoginController implements IController
             case 6:
                 //atendente
                 $_SESSION["usuario"]=$usuario;
-                header('Location: /listar-medicamento');
+                header('Location: /opcoesAtendente');
                 exit();
 
         }

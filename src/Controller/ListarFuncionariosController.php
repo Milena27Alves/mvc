@@ -4,6 +4,7 @@
 namespace Ifnc\Tads\Controller;
 
 
+use Ifnc\Tads\Entity\Endereco;
 use Ifnc\Tads\Entity\Funcionarios;
 use Ifnc\Tads\Entity\Produto;
 use Ifnc\Tads\Helper\Render;
@@ -20,6 +21,7 @@ class ListarFuncionariosController implements IController
             "rodape.php"
         ],
             ["funcionarios" => Funcionarios::all(),
+                "enderecos" => Endereco::all(),
                 "titulo"=> "Lista de funcionarios"]);
     }
 }

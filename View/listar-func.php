@@ -1,32 +1,31 @@
-<nav class="navbar navbar-inverse">
-    <div class="container-fluid">
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="#"><img src="img/logoOfc.png" id="logo"/></a>
-        </div>
-        <ul class="nav navbar-nav navbar-left">
-            <li id="texto""><a href="pag2.html">UBS</a></li>
-            <li><a href="">Funcionario</a></li>
-            <li><a href="">Remedio</a></li>
-            <li><a href="">Relatorios</a></li>
-            <li><a href="">Informações</a></li>
-            <li><a href="">Notificar</a></li>
+<nav class="navbar navbar-expand-lg navbar-light bg-white">
+    <a class="navbar-brand" href="/opcoes"><img src="img/logoOfc.png" id="logo"/></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+            <a class="nav-item nav-link" href="/listar-ubs">UBS <span class="sr-only">(current)</span></a>
+            <a class="nav-item nav-link" href="/listar-func">Funcionario</a>
+            <a class="nav-item nav-link" href="/listar-medicamento">Remedio</a>
+            <a class="nav-item nav-link" href="#">Relatorios</a>
+            <a class="nav-item nav-link" href="#">Informações</a>
+            <a class="nav-item nav-link" href="#">Notificar</a>
 
-        </ul>
-        <ul class="nav navbar-nav navbar-right">
-            <li id="texto""><a href="pag2.html"><span class="glyphicon glyphicon-user"></span> perfil</a></li>
-            <li><a href="\logout" class="text-decoration-none text-whit"><span class="glyphicon glyphicon-share"></span> sair</a></li>
-        </ul>
+        </div>
     </div>
+    <div class="nav navbar-nav">
+        <ul class="nav justify-content-end">
+            <li class="nav-item">
+                <a href="\logout" class="nav-item nav-link"><span class="glyphicon glyphicon-share"></span> sair</a>
+            </li>
     </div>
+
 </nav>
 
+
 <div class="Container">
-    <div class="row" id="corpo-do-formulario">
+    <div class="row">
         <div id="tabela">
     <div class="my-3 p-3 bg-white rounded shadow-sm">
         <div class="text-center">
@@ -41,6 +40,12 @@
                 <th scope="col">Matricula</th>
                 <th scope="col">tipo</th>
                 <th scope="col">E-mail</th>
+                <th scope="col">logradouro</th>
+                <th scope="col">numero</th>
+                <th scope="col">bairro</th>
+                <th scope="col">cidade</th>
+                <th scope="col">estado</th>
+                <th scope="col">cep</th>
                 <th scope="col">ações</th>
             </tr>
             </thead>
@@ -54,6 +59,16 @@
                     <td><?=$funcionario->matricula?></td>
                     <td><?=$funcionario->tipo?></td>
                     <td><?=$funcionario->email?></td>
+                    <?php
+                        $a = $funcionario->endereco;
+                        $endereco = \Ifnc\Tads\Entity\Endereco::find($a);
+                    ?>
+                    <td><?=$endereco->logradouro?></td>
+                    <td><?=$endereco->numero?></td>
+                    <td><?=$endereco->bairro?></td>
+                    <td><?=$endereco->cidade?></td>
+                    <td><?=$endereco->estado?></td>
+                    <td><?=$endereco->cep?></td>
                     <td>
                         <a href="/editar-funcionario-form?id=<?=$funcionario->id?>" class="fas fa-edit text-dark text-decoration-none mr-2"><span class="glyphicon glyphicon-edit"></span></a>
                         <a href="/apagar-funcionario?id=<?=$funcionario->id?>" class="fas fa-eraser text-dark text-decoration-none mr-2"><span class="glyphicon glyphicon-trash"></span></a>

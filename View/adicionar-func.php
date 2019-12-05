@@ -1,68 +1,99 @@
-<nav class="navbar navbar-inverse">
-    <div class="container-fluid">
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="#"><img src="img/logoOfc.png" id="logo"/></a>
-        </div>
-        <ul class="nav navbar-nav navbar-left">
-            <li id="texto""><a href="pag2.html">UBS</a></li>
-            <li><a href="\logout">Funcionario</a></li>
-            <li><a href="\logout">Remedio</a></li>
-            <li><a href="\logout">Relatorios</a></li>
-            <li><a href="\logout">Informações</a></li>
-            <li><a href="\logout">Notificar</a></li>
+<nav class="navbar navbar-expand-lg navbar-light bg-white">
+    <a class="navbar-brand" href="/opcoes"><img src="img/logoOfc.png" id="logo"/></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+            <a class="nav-item nav-link" href="/listar-ubs">UBS <span class="sr-only">(current)</span></a>
+            <a class="nav-item nav-link" href="/listar-func">Funcionario</a>
+            <a class="nav-item nav-link" href="/listar-medicamento">Remedio</a>
+            <a class="nav-item nav-link" href="#">Relatorios</a>
+            <a class="nav-item nav-link" href="#">Informações</a>
+            <a class="nav-item nav-link" href="#">Notificar</a>
 
-        </ul>
-        <ul class="nav navbar-nav navbar-right">
-            <li id="texto""><a href="pag2.html"><span class="glyphicon glyphicon-user"></span> perfil</a></li>
-            <li><a href="\logout" class="text-decoration-none text-whit"><span class="glyphicon glyphicon-share"></span> sair</a></li>
-        </ul>
+        </div>
     </div>
+    <div class="nav navbar-nav">
+        <ul class="nav justify-content-end">
+            <li class="nav-item">
+                <a href="\logout" class="nav-item nav-link"><span class="glyphicon glyphicon-share"></span> sair</a>
+            </li>
     </div>
+
 </nav>
 
+
 <div class="Container">
-    <div class="row" id="corpo-do-formulario">
-        <div id="formulario">
-        <form action="/adcionar-funcionario-form" method="post">
-            <div class="form-group">
-                <label>Nome</label>
-                <input type="text" name ="nome" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Seu nome">
-            </div>
-            <div class="form-group">
-                <label>cpf</label>
-                <input type="text" name="cpf" class="form-control" id="exampleInputPassword1" placeholder="seu cpf">
-            </div>
-            <div class="form-group">
-                <label>Matricula</label>
-                <input type="text" name= "matricula" class="form-control" id="exampleInputPassword1" placeholder="sua matricula">
-            </div>
-            <div class="form-group">
-                <label>login/e-mail</label>
-                <input type="text" name= "email" class="form-control" id="exampleInputPassword1" placeholder="seu login">
-            </div>
-            <div class="form-group">
-                <label>senha</label>
-                <input type="text" name= "senha" class="form-control" id="exampleInputPassword1" placeholder="sua senha">
-            </div>
-            <div class="form-group">
-                <label>Tipo de funcionario</label>
-            <select name="tipo" class=" form-control" id="options" onchange="optionCheck()">
-                <?php foreach($tipos as $tipo){ ?>
-                <option value="<?=$tipo->id;?>"> <?=$tipo->nome;?> </option>
-                <?php } ?>
-            </select>
-            </div>
-            <div class="form-group" id="hiddenDiv" style=visibility:hidden;">
-                <label class="">nº registro</label>
-                <input type="text" name= "registro" class="form-control" >
-            </div>
-            <button type="submit" class="btn btn-primary">Enviar</button>
-        </form>
+    <div class="form-row" id="corpo-do-formulario" >
+
+        <div id="formulario" >
+
+            <form action="/adcionar-funcionario-form" method="post" >
+                <div class="form-row">
+                    <div class="col-12 form-group">
+                        <input type="text" name ="nome"class="form-control" placeholder="Nome">
+                    </div>
+
+                    <div class="col-4 form-group">
+                        <input type="text" name="cpf" class="form-control" placeholder="CPF">
+                    </div>
+
+                    <div class="col-4 form-group">
+                        <input type="text" name= "matricula" class="form-control" placeholder="Matricula">
+                    </div>
+
+                    <div class="col-4 form-group" >
+                        <select name="tipo" class=" form-control" id="options">
+                            <?php foreach($tipos as $tipo){ ?>
+                                <option value="<?=$tipo->id;?>" data-registro="<?=$tipo->registro?>"> <?=$tipo->nome;?> </option>
+                            <?php } ?>
+                        </select>
+                    </div>
+
+                    <div class=" col-12 form-group d-none" id="registro" >
+                        <input type="text" name= "registro" class="form-control"  placeholder= nº registro >
+                    </div>
+
+                    <div class="col-6 form-group">
+                        <input type="text" name= "email" class="form-control" placeholder="Login">
+                    </div>
+
+                    <div class="col-4 form-group">
+                        <input type="password" name= "senha" class="form-control" placeholder="Senha">
+                    </div>
+                    <div class="col-2 form-group">
+                        <select name="ubs" class=" form-control d-none" id="optionsUbs">
+                            <?php foreach($ubs as $unidade){ ?>
+                                <option value="<?=$unidade->id;?>"> <?=$unidade->nome;?> </option>
+                            <?php } ?>
+                        </select>
+                    </div>
+                    <div class="col-9 form-group">
+                        <input type="text" name= "logradouro" class="form-control" placeholder="nome da rua">
+                    </div>
+
+                    <div class="col-3 form-group">
+                        <input type="text" name= "numero" class="form-control" placeholder="número">
+                    </div>
+                    <div class="col-3 form-group">
+                        <input type="text" name= "bairro" class="form-control" placeholder="bairro">
+                    </div>
+
+                    <div class="col-3 form-group">
+                        <input type="text" name= "cidade" class="form-control" placeholder="cidade">
+                    </div>
+                    <div class="col-3 form-group">
+                        <input type="text" name= "estado" class="form-control" placeholder="estado">
+                    </div>
+
+                    <div class="col-3 form-group">
+                        <input type="text" name= "cep" class="form-control" placeholder="cep">
+                    </div>
+
+                </div>
+                <button type="submit" class="btn btn-primary btn-lg btn-block">Enviar</button>
+            </form>
         </div>
     </div>
 </div>

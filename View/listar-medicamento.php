@@ -1,35 +1,34 @@
 
-<nav class="navbar navbar-inverse">
-    <div class="container-fluid">
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="#"><img src="img/logoOfc.png" id="logo"/></a>
-        </div>
-        <ul class="nav navbar-nav navbar-left">
-            <li id="texto""><a href="pag2.html">UBS</a></li>
-            <li><a href="\logout">Funcionario</a></li>
-            <li><a href="\logout">Remedio</a></li>
-            <li><a href="\logout">Relatorios</a></li>
-            <li><a href="\logout">Informações</a></li>
-            <li><a href="\logout">Notificar</a></li>
+<nav class="navbar navbar-expand-lg navbar-light bg-white">
+    <a class="navbar-brand" href="/opcoes"><img src="img/logoOfc.png" id="logo"/></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+            <a class="nav-item nav-link" href="/listar-ubs">UBS <span class="sr-only">(current)</span></a>
+            <a class="nav-item nav-link" href="/listar-func">Funcionario</a>
+            <a class="nav-item nav-link" href="/listar-medicamento">Remedio</a>
+            <a class="nav-item nav-link" href="#">Relatorios</a>
+            <a class="nav-item nav-link" href="#">Informações</a>
+            <a class="nav-item nav-link" href="#">Notificar</a>
 
-        </ul>
-        <ul class="nav navbar-nav navbar-right">
-            <li id="texto""><a href="pag2.html"><span class="glyphicon glyphicon-user"></span> perfil</a></li>
-            <li><a href="\logout" class="text-decoration-none text-whit"><span class="glyphicon glyphicon-share"></span> sair</a></li>
-        </ul>
+        </div>
     </div>
+    <div class="nav navbar-nav">
+        <ul class="nav justify-content-end">
+            <li class="nav-item">
+                <a href="\logout" class="nav-item nav-link"><span class="glyphicon glyphicon-share"></span> sair</a>
+            </li>
     </div>
+
 </nav>
+
 
 <div class="Container">
     <div class="row" id="corpo-do-formulario">
         <div id="tabela">
-            <div class="my-3 p-3 bg-white rounded shadow-sm">
+            <div class="my-3 p-3 bg-white rounded shadow-sm" id="listarMed">
                 <div class="text-center">
                     <a href="/adcionar-medicamento" class="fas fa-plus text-dark text-decoration-none"><span class="glyphicon glyphicon-plus"></span></a>
                 </div>

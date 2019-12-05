@@ -6,6 +6,8 @@ namespace Ifnc\Tads\Controller;
 
 use Ifnc\Tads\Entity\Funcionarios;
 use Ifnc\Tads\Entity\Produto;
+use Ifnc\Tads\Entity\TipoFuncionario;
+use Ifnc\Tads\Entity\Ubs;
 use Ifnc\Tads\Helper\Render;
 use Ifnc\Tads\Helper\Transaction;
 
@@ -21,7 +23,9 @@ class editarFuncionarioFormController
                 "rodape-admin.php"],
             [
                 "titulo"=>"Editar funcionario",
-                "funcionario"=>Funcionarios::find($_GET["id"])
+                "tipos"=>TipoFuncionario::all(),
+                "funcionario"=>Funcionarios::find($_GET["id"]),
+                "ubs" => Ubs::all()
             ]);
 
     }

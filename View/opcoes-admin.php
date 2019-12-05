@@ -21,7 +21,7 @@
     <div class="row">
         <div class="col-sm-4">
             <div class="panel">
-                <div class="panel-body"><a href="pag2.html"><img src="img/ubs.jpg" class="img-responsive" id="img" alt="Image"></a></div>
+                <div class="panel-body"><a href="/listar-ubs"><img src="img/ubs.jpg" class="img-responsive" id="img" alt="Image"></a></div>
             </div>
         </div>
         <div class="col-sm-4">
