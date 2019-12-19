@@ -6,20 +6,18 @@ namespace Ifnc\Tads\Controller;
 
 use Ifnc\Tads\Helper\Render;
 
-class opcoesAdminController implements IController
+class opcoesMedicoController implements IController
 {
-
     public function request(): void
     {
         echo Render::html(
             ["cabecalhoAdmin.php",
-                "opcoes-admin.php",
+                "opcoes-medico.php",
                 "rodape-admin.php"],
             [
-                "user"=> isset($_SESSION['usuario']) ? $_SESSION['usuario'] : ''
-
-
-            ]
+                //"user"=> isset($_SESSION['usuario']) ? $_SESSION['usuario'] : ''
+                ]
         );
     }
+
 }

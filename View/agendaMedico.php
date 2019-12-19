@@ -6,15 +6,15 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="#"><img src="img/logoOfc.png" id="logo"/></a>
+            <a class="navbar-brand" href="/opcoesMedico"><img src="img/logoOfc.png" id="logo"/></a>
         </div>
         <ul class="nav navbar-nav navbar-left">
-            <li><a href="/listar-medico" class="text-decoration-none text-whit">Marcar Consulta</a></li>
-            <li><a href="/agendar" class="text-decoration-none text-whit">Vizualizar Agenda</a></li>
-            <li><a href="/listar-prontuario" class="text-decoration-none text-whit">Prontuario</a></li>
-            <li><a href="" class="text-decoration-none text-whit">Produção</a></li>
-            <li><a href="" class="text-decoration-none text-whit">Informações</a></li>
-            <li><a href="" class="text-decoration-none text-whit">Relatorios</a></li>
+            <li><a href="/agendarPorMedico" class="text-decoration-none text-whit"> Agenda</a></li>
+            <li><a href="/listar-prontuario" class="text-decoration-none text-whit"> Prontuario</a></li>
+            <li><a href="" class="text-decoration-none text-whit"> Consulta</a></li>
+            <li><a href="" class="text-decoration-none text-whit"> Produção</a></li>
+            <li><a href="" class="text-decoration-none text-whit"> Informações</a></li>
+            <li><a href="" class="text-decoration-none text-whit"> Relatorios</a></li>
         </ul>
 
         <ul class="nav navbar-nav navbar-right">
@@ -32,18 +32,19 @@
                 <div class="form-row" id="data">
                     <div class="form-group">
                         <div class="col-sm-10" id="data2">
-                        <div class="input-group date" >
-                            <input type="date" class="form-control" id ="campo_data">
+                            <div class="input-group date" >
+                                <input type="text" style="visibility: hidden" class="form-control" id ="campo_data" value="<?=date("Y/m/d")?>">
+                                <input type="text" style="visibility: hidden" class="form-control" id ="campo_user" value="<?=$user->id?>">
+                            </div>
                         </div>
-                        </div>
-                        </div>
+                    </div>
                     <div class="form-group" >
                         <div class="col-sm-2" id="data2">
                         </div>
                     </div>
                 </div>
         </div>
-            </form>
+        </form>
         <button type="submit" class="btn btn-primary btn-sm btn-block " id="user_btn">Enviar</button>
         <table class="table">
             <thead>
@@ -68,16 +69,16 @@
                 <th scope="col">Paciente</th>
                 <th scope="col">Data</th>
                 <th scope="col">Status</th>
-                <th scope="col">Alterar status</th>
-                <th scope="col">Desmarcar</th>
+                <th scope="col">Prontuario Paciente</th>
             </tr>
             </thead>
             <tbody id="pacientesListados">
 
             </tbody>
         </table>
+    </div>
 </div>
-</div>
+<script src="js/consultaMedico.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment-with-locales.min.js"></script>
-<script src="js/user.js"></script>
+
 

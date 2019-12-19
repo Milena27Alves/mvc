@@ -54,7 +54,7 @@ class LoginController implements IController
             case 4:
                 //medico
                 $_SESSION["usuario"]=$usuario;
-                header('Location: /listar-medicamento');
+                header('Location: /opcoesMedico');
                 exit();
             case 5:
                 //dentista

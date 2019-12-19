@@ -1,17 +1,17 @@
-
 <nav class="navbar navbar-expand-lg navbar-light bg-white">
-    <a class="navbar-brand" href="/opcoes"><img src="img/logoOfc.png" id="logo"/></a>
+    <a class="navbar-brand" href="/opcoesMedico"><img src="img/logoOfc.png" id="logo"/></a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav">
-            <a class="nav-item nav-link" href="/listar-medico">Marcar Consulta<span class="sr-only">(current)</span></a>
-            <a class="nav-item nav-link" href="/agendar">Vizualizar Agenda</a>
+            <a class="nav-item nav-link" href="/agendarPorMedico">Agenda<span class="sr-only">(current)</span></a>
             <a class="nav-item nav-link" href="/listar-prontuario">Prontuario</a>
+            <a class="nav-item nav-link" href="">Consulta</a>
             <a class="nav-item nav-link" href="#">Produção</a>
             <a class="nav-item nav-link" href="#">Informações</a>
             <a class="nav-item nav-link" href="#">Relatorios</a>
+            <a class="nav-item nav-link" href="/listar-familia">Familia <span class="sr-only">(current)</span></a>
 
         </div>
     </div>
@@ -25,27 +25,24 @@
 </nav>
 
 
+
 <div class="Container">
     <div class="row" id="corpo-do-formulario">
         <div id="tabela">
-            <div class="my-3 p-3 bg-white rounded shadow-sm" id="listarMed">
+            <div class="my-3 p-3 bg-white rounded shadow-sm" id="listarUbs">
                 <table class="table">
                     <thead>
                     <tr>
                         <th scope="col">#</th>
-                        <th scope="col">Nome</th>
-                        <th scope="col">Ações</th>
+                        <th scope="col">Nome</th
                     </tr>
                     </thead>
                     <tbody>
                     <?php
-                    foreach($medicos as $medico){ ?>
+                    foreach($avaliacao as $ubs){ ?>
                         <tr>
-                            <th scope="row"><?=$medico->id?></th>
-                            <td><?=$medico->nome?></td>
-                            <td>
-                                <a href="/Marcar-Consulta?id=<?=$medico->id?>" class="fas fa-edit text-dark text-decoration-none mr-2"><span class="glyphicon glyphicon-edit"></span></a>
-                            </td>
+                            <th scope="row"><?=$ubs->id?></th>
+                            <td><?=$ubs->avaliacao->tipo?></td>
                         </tr>
                     <?php } ?>
                     </tbody>

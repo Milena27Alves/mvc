@@ -21,22 +21,21 @@
     <div class="row">
         <div class="col-sm-4">
             <div class="panel">
-                <div class="panel-body"><a href="/listar-medico"><img src="img/marcar.jpg" class="img-responsive" id="img" alt="Image"></a></div>
+                <div class="panel-body"><a href="/agendarPorMedico"><img src="img/vizAg.jpg" class="img-responsive" id="img" alt="Image"></a></div>
             </div>
         </div>
         <div class="col-sm-4">
             <div class="panel">
-                <div class="panel-body"><a href="/agendar"><img src="img/viadenda.jpg" class="img-responsive" id="img" alt="Image"></a></div>
+                <div class="panel-body"><a href="/listar-prontuario"><img src="img/VizpP.jpg" class="img-responsive" id="img" alt="Image"></a></div>
             </div>
         </div>
-        <div class="col-sm-4">
-            <div class="panel">
-                <div class="panel-body"><a href="listar-prontuario"><img src="img/ProntuarioOfc.jpg" class="img-responsive" id="img" alt="Image"></a></div>
-            </div>
+    <div class="col-sm-4">
+        <div class="panel">
+            <div class="panel-body"><a href=""><img src="img/vizCon.jpg" class="img-responsive" id="img" alt="Image"></a></div>
         </div>
     </div>
+    </div>
 </div><br>
-
 <div class="container">
     <div class="row">
         <div class="col-sm-4">

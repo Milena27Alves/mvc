@@ -26,7 +26,7 @@
 <div class="Container">
     <div class="row famil">
         <div id="formulario">
-            <div action="/adcionar-medicamento-form" method="post">
+            <form action="/editar-medicamento" method="post">
                 <div class="form-row" id="adc-med">
                     <input name="id" type="text" class="d-none visible-xs" value="<?=$medicamento->id?>">
                     <div class="form-group col-6">
@@ -47,6 +47,6 @@
                     <button type="submit" class="btn btn-primary col-12">Enviar</button>
                 </div>
                 </form>
-            </div>
+            </form>
         </div>
     </div>

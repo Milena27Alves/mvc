@@ -30,26 +30,31 @@
 
         <div id="formulario" >
 
-            <form action="/MarcarConsulta" method="post" >
+            <form action="/editar-consulta" method="post" >
                 <div class="form-row">
-                    <input name="medico" type="text" class="d-none" value="<?=$_GET['id']?>">
+                    <input name="id" class="d-none" type="text" value="<?=$_GET['id']?>">
                     <div class="col-12 form-group">
-                        <select name="nome" class=" form-control" id="options">
-                            <?php foreach($pacientes as $tipo){ ?>
-                                <option value="<?=$tipo->id;?>" data-registro="<?=$tipo->registro?>"> <?=$tipo->nome;?> </option>
-                            <?php } ?>
-                        </select>
+                        <input type="text" class="d-none" name="paciente" class="form-control" value="<?=$marcacao->paciente?>">
+
                     </div>
-                    <input name="id_end" type="text" class="d-none" >
-                    <div class="col-9 form-group">
-                        <select name="turno" class=" form-control">
-                            <option value="manha">Manhã</option>
-                            <option value="tarde">Tarde</option>
+                    <div class="col-12 form-group">
+                        <input type="text" class="d-none" name="medico" class="form-control" value="<?=$marcacao->medico?>">
+
+                    </div>
+                    <div class="col-6 form-group">
+                        <select name="turno" class=" form-control d-none">
+                            <option value="<?=$marcacao->turno?>"><?=$marcacao->turno;?></option>
                         </select>
                     </div>
 
-                    <div class="col-3 form-group">
-                        <input type="text" name= "data" class="form-control" placeholder="YY/MM/DD">
+                    <div class="col-8 form-group">
+                        <input type="text" name= "data" class="form-control d-none" value="<?=$marcacao->data_consulta?>">
+                    </div>
+                    <div class="col-12 form-group">
+                        <select name="status" class=" form-control">
+                            <option value="F">Falta</option>
+                            <option value="P">Presença</option>
+                        </select>
                     </div>
 
 
@@ -59,4 +64,3 @@
         </div>
     </div>
 </div>
-

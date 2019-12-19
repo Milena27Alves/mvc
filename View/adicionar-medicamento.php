@@ -27,7 +27,7 @@
 <div class="Container">
     <div class="row famil">
         <div id="formulario">
-            <div action="/adcionar-medicamento-form" method="post">
+            <form action="/adcionar-medicamento-form" method="post">
                 <div class="form-row" id="adc-med">
                 <div class="form-group col-6">
                     <input type="text" name ="nome" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="nome do medicamento">
@@ -47,6 +47,6 @@
                     <button type="submit" class="btn btn-primary col-12">Enviar</button>
             </div>
             </form>
-        </div>
+        </form>
     </div>
 </div>

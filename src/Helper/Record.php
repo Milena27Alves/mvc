@@ -57,7 +57,6 @@ abstract class Record
         }
 
 
-
     }
 
     public static function findByCondition($filter = TRUE)
@@ -65,10 +64,11 @@ abstract class Record
         $rc = new ReflectionClass(get_called_class());
         $sql = "SELECT * FROM {$rc->getShortName()} WHERE {$filter}";
 
-
+    echo $sql;
         if ($conn = Transaction::get()) {
             $result = $conn->query($sql);
-            return $result->fetchObject(get_called_class());
+            return $result->
+            fetchObject(get_called_class());
         }
         else {
             throw new Exception('Não há transação ativa!!');

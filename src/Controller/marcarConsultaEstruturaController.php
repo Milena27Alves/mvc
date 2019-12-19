@@ -5,6 +5,7 @@ namespace Ifnc\Tads\Controller;
 
 
 use Ifnc\Tads\Entity\Funcionarios;
+use Ifnc\Tads\Entity\Paciente;
 use Ifnc\Tads\Helper\Render;
 use Ifnc\Tads\Helper\Transaction;
 
@@ -20,6 +21,7 @@ class marcarConsultaEstruturaController
             "rodape-admin.php"
         ],
             ["medico"=> $_GET["id"],
+                "pacientes"=> Paciente::all(),
                 "titulo"=> "Formulario para consulta"]);
     }
 

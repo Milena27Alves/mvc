@@ -5,20 +5,20 @@ namespace Ifnc\Tads\Controller;
 
 
 use Ifnc\Tads\Helper\Render;
+use Ifnc\Tads\Helper\Transaction;
 
-class opcoesAdminController implements IController
+class AgendaMedicoController
 {
-
     public function request(): void
     {
+        Transaction::open();
         echo Render::html(
-            ["cabecalhoAdmin.php",
-                "opcoes-admin.php",
+            [
+                "cabecalhoAdmin.php",
+                "agendaMedico.php",
                 "rodape-admin.php"],
             [
                 "user"=> isset($_SESSION['usuario']) ? $_SESSION['usuario'] : ''
-
-
             ]
         );
     }
