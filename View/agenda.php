@@ -6,7 +6,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="#"><img src="img/logoOfc.png" id="logo"/></a>
+            <a class="navbar-brand" href="/opcoesAtendente"><img src="img/logoOfc.png" id="logo"/></a>
         </div>
         <ul class="nav navbar-nav navbar-left">
             <li><a href="/listar-medico" class="text-decoration-none text-whit">Marcar Consulta</a></li>

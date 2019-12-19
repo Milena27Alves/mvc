@@ -1,16 +1,16 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-white">
-    <a class="navbar-brand" href="/opcoes"><img src="img/logoOfc.png" id="logo"/></a>
+    <a class="navbar-brand" href="/opcoesAtendente"><img src="img/logoOfc.png" id="logo"/></a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav">
-            <a class="nav-item nav-link" href="/listar-ubs">UBS <span class="sr-only">(current)</span></a>
-            <a class="nav-item nav-link" href="/listar-func">Funcionario</a>
-            <a class="nav-item nav-link" href="/listar-medicamento">Remedio</a>
-            <a class="nav-item nav-link" href="#">Relatorios</a>
+            <a class="nav-item nav-link" href="/listar-medico">Marcar Consulta<span class="sr-only">(current)</span></a>
+            <a class="nav-item nav-link" href="/agendar">Vizualizar Agenda</a>
+            <a class="nav-item nav-link" href="/listar-prontuario">Prontuario</a>
+            <a class="nav-item nav-link" href="#">Produção</a>
             <a class="nav-item nav-link" href="#">Informações</a>
-            <a class="nav-item nav-link" href="#">Notificar</a>
+            <a class="nav-item nav-link" href="#">Relatorios</a>
 
         </div>
     </div>
